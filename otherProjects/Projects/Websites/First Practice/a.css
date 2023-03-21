@@ -1,0 +1,58 @@
+.hide {
+  display: none;
+}
+
+li input {
+  display: none;
+}
+
+li.edit span {
+  display: none;
+}
+
+li.edit input {
+  display: initial;
+}
+
+.panel1 ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.panel1 ul li {
+  list-style: none;
+  float: left;
+  width: 200px;
+  height: 100px;
+  background-color: tomato;
+  margin-right: 10px;
+}
+
+.panel1 ul li .head1 {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: teal;
+  text-align: center;
+}
+
+.panel2 ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.panel2 ul li {
+  list-style: none;
+  float: left;
+  width: 200px;
+  height: 100px;
+  background-color: tomato;
+}
+
+.panel2 ul li .head2 {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: teal;
+  text-align: center;
+}

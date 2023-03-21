@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to right, #536976, #292e49);
+
+  overflow: hidden;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to right top, black, #3f3f3f);
+  opacity: 0.6;
+  font-size: 1.2rem;
+  font-family: "Courier New", Courier, monospace;
+  height: 65px;
+}
+
+.logo {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+.navbar li {
+  list-style: none;
+  color: aliceblue;
+}
+
+.navbar li:hover {
+  color: rgb(142, 194, 207);
+}
+
+.burger-button {
+  display: none;
+}
+.mobile-nav {
+  display: none;
+}
+@media only screen and (max-width: 765px) {
+  .logo {
+    width: 300px;
+  }
+  .nav {
+    display: none;
+  }
+  .burger-button {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100px;
+    height: 25px;
+    margin-left: 30px;
+    cursor: pointer;
+  }
+  .burger-button .one {
+    background-color: aliceblue;
+    width: 25px;
+    height: 3px;
+  }
+  .burger-button .two {
+    background-color: aliceblue;
+    width: 25px;
+    height: 3px;
+  }
+
+  .burger-button .three {
+    background-color: aliceblue;
+    width: 25px;
+    height: 3px;
+  }
+  .mobile-nav {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    background-image: linear-gradient(to right top, #000000, #2a2a2c);
+    width: 50%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .mobile-nav ul {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+  }
+}
+
+.active {
+  transform: translate(0%);
+}
+
+@media only screen and (max-width: 530px) {
+  .logo {
+    display: flex;
+    justify-content: space-around;
+  }
+  .burger-button {
+    margin-left: 10px;
+  }
+}

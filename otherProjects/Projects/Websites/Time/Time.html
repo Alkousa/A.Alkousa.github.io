@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+let getBody = document.body;
+let newElement = document.createElement('h1');
+
+
+let date = new Date();
+let currentTime = date.getHours();
+
+let createTxtMsg;
+
+if(currentTime >= 4 && currentTime < 12) {
+   createTxtMsg = 'Good Morning';
+}else if (currentTime >= 12 && currentTime < 18) {
+    createTxtMsg = 'Good Afternoon';
+}else if(currentTime >= 18 && currentTime < 22) {
+    createTxtMsg = 'Good Evening';
+}else if (currentTime >= 22 && currentTime < 4) {
+        createTxtMsg = 'Good Night';
+}else {
+createTxtMsg = 'ERORR';
+}
+
+let  createEleTxt= document.createTextNode(createTxtMsg);
+
+newElement.appendChild(createEleTxt);
+
+getBody.appendChild(newElement)
+
+
+
+
+newElement.setAttribute('class', 'welcomde');
+
+newElement.style.cssText('text-align:center; font-size: 30px;')
+
+
+
+</script>
+</html>
+
