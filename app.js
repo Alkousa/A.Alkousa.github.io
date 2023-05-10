@@ -18,8 +18,8 @@ function postitionGenerator(num) {
   for (let i = 0; i < num; i++) {
     let x = Math.random() * innerWidth;
     let y = Math.random() * innerHeight;
-    let dx = Math.random();
-    let dy = Math.random();
+    let dx = Math.random() * 0.5;
+    let dy = Math.random() * 0.5;
     let s = Math.random() * 2;
 
     const stars = new Stars(x, y, s, dx, dy);
@@ -40,15 +40,8 @@ function animate() {
     ctx.fillStyle = "white";
     ctx.fill();
 
-    // thisStar.x += thisStar.dx;
-    thisStar.y += thisStar.dy;
+    thisStar.x += thisStar.dx;
 
-    // wrap star around canvas if it goes off the edges
-    // if (thisStar.x > canvas.width + thisStar.s) {
-    //   thisStar.x = -thisStar.s;
-    // } else if (thisStar.x < -thisStar.s) {
-    //   thisStar.x = canvas.width + thisStar.s;
-    // }
     if (thisStar.y > canvas.height + thisStar.s) {
       thisStar.y = -thisStar.s;
     } else if (thisStar.y < -thisStar.s) {
