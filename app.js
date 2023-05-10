@@ -42,10 +42,10 @@ function animate() {
 
     thisStar.x += thisStar.dx;
 
-    if (thisStar.y > canvas.height + thisStar.s) {
-      thisStar.y = -thisStar.s;
-    } else if (thisStar.y < -thisStar.s) {
-      thisStar.y = canvas.height + thisStar.s;
+    if (thisStar.x > canvas.width + thisStar.s) {
+      thisStar.x = -thisStar.s;
+    } else if (thisStar.x < -thisStar.s) {
+      thisStar.x = canvas.width + thisStar.s;
     }
   }
   requestAnimationFrame(animate);
